@@ -2,3 +2,5 @@ data.json
 db.sqlite3
 main.py
 venv
+__pycache__
+.idea
