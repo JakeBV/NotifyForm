@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head><link rel="stylesheet" href="{% static 'css/notify.css' %}"></head>
+{% block content %}
+    <h1 align="center">New notify</h1>
+        <form method="POST" class="post-form">{% csrf_token %}
+            <table>
+                {{ form }}
+            </table>
+            <button type="submit" class="button">Send</button>
+        </form>
+    {% if alert_flag %}
+        <script>
+            alert("{{ cd.result }}")
+        </script>
+    {% endif %}
+{% endblock %}
+</html>

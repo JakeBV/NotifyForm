@@ -1,0 +1,75 @@
+body {
+    background-color: #444442;
+    padding-top: 35px;
+    text-align: center;
+}
+
+h1 {
+    font-family: inherit;
+    font-weight: 200;
+    font-size: 30px;
+    color: white;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.button {
+    display: block;
+    height: 35px;
+    width: 670px;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #2d2d2e;
+    border-radius: 4px;
+    color: gray;
+    border: 0;
+}
+
+input,
+textarea {
+    padding: 10px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #2d2d2e;
+    color: white;
+    border-radius: 4px;
+
+}
+
+.styled-input.wide {
+    width: 650px;
+    max-width: 100%;
+    height: 100px;
+    max-height: 100%;
+    background-color: #2d2d30;
+    position: relative;
+    resize:vertical;
+}
+
+.styled-input {
+    width: 650px;
+    position: relative;
+}
+
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+
+}
+
+
+.button, textarea, input {
+  font-family: inherit;
+  font-size: 100%;
+}
