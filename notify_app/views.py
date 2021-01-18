@@ -20,14 +20,11 @@ def notify_new(request):
             cd = form.cleaned_data
             sent = True
             tokens_devices = cd['tokens_devices'].replace(' ', '').split(',')
-            title = cd['title']
-            message = cd['message']
-            payload_title = cd['payload_title']
-            payload_body = cd['payload_body']
-            payload = {'payload_title': payload_title, 'payload_body': payload_body}
-            if not payload_body or not payload_title:
-                payload = None
-            result = notifications.notify(tokens_devices, title, message, payload)
+            data = {'notification_title': cd['notification_title'],
+                    'notification_body': cd['notification_body'],
+                    'payload_title': cd['payload_title'],
+                    'payload_body': cd['payload_body']}
+            result = notifications.notify(tokens_devices, data)
             cd['result'] = f'Done! Success: {result["success"]} | Failure: {result["failure"]}'
             form = NotifyForm()
             return render(request, 'notify_app/send_notify.html', {'form': form, 'sent': sent,
